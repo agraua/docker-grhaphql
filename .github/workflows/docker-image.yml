@@ -26,9 +26,11 @@ jobs:
     - name: Buidl Docker Image
       run: | 
         docker build -t nus32/graphql-actions:0.0.2 .
+        docker build -t nus32/graphql-actions:latest .
     - name: Push Docker Image
       run: | 
         docker push nus32/graphql-actions:0.0.2
+        docker push nus32/graphql-actions:latest
         
     # - name: Build the Docker image
     #   run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
